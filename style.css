@@ -60,7 +60,7 @@ main {
 }
 
 .nav-links li a {
-    color: #333;
+    color: var(--text-color);
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
@@ -80,6 +80,7 @@ main {
 }
 
 /* Estilos para modo oscuro */
+
 body.dark-mode .nav-links.scrolled {
     background: rgba(23, 23, 23, 0.8);
 }
@@ -89,3 +90,26 @@ body.dark-mode .theme-toggle {
     color: #fff;
 }
 
+:root {
+    --background-color: #ffffff;
+    --text-color: #333333;
+}
+
+.dark-theme {
+    --background-color: #1a1a1a;
+    --text-color: #ffffff;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
