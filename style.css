@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Figtree, sans-serif;
     background: #f5f5f5;
     color: #333;
     padding: 20px;
@@ -15,35 +15,31 @@ body {
     min-height: 100vh;
 }
 
-header {
+.navbar {
     text-align: center;
-    padding: 20px;
-    background: #007bff;
-    color: white;
+    padding: 20px 0;
     border-radius: 10px;
+    background-color: transparent !important; /* Sin color de fondo */
+    margin: 0; /* Eliminar margen */
+    box-shadow: none; /* Eliminar sombra */
 }
 
-nav {
+.navbar .navbar-nav {
+    margin: 0 auto; 
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 20px;
-    flex-wrap: wrap; /* Permite que los enlaces se acomoden */
-    margin: 20px 0;
 }
 
-nav a {
-    text-decoration: none;
-    color: #007bff;
+.navbar .nav-link {
+    color: black;
     font-weight: bold;
-    padding: 10px 15px;
-    border: 2px solid #007bff;
-    border-radius: 5px;
-    transition: background 0.3s;
+    text-transform: uppercase;
 }
 
-nav a:hover {
-    background: #007bff;
-    color: white;
+.navbar .btn {
+    margin-left: 20px;
 }
 
 /* Sección principal */
