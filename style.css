@@ -16,16 +16,66 @@ body {
 
 /* Sección principal */
 main {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-/* Diseño responsivo */
+section {
+    max-width: 800px;
+    width: 100%;
+}
+
+.intro {
+    font-size: 4.5rem;
+    font-weight: 800;
+    background: linear-gradient(100deg, black, #4A5561);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    animation: fadeIn 1s ease-out;
+}
+
+.p_intro {
+    font-size: 2rem;
+    font-weight: 500;
+    background: linear-gradient(100deg, black, #4A5561);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Make it responsive */
+@media (max-width: 768px) {
+    .intro {
+        font-size: 3rem;
+    }
+}
+
+/* Update the media queries to not affect the column layout since we're using flex now */
 @media (min-width: 768px) {
     main {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas medianas */
+        padding-top: 120px;
     }
 }
 
@@ -48,7 +98,6 @@ main {
     display: flex;
     gap: 2rem;
     list-style: none;
-    padding: 1rem 2rem;
     border-radius: 50px;
     transition: all 0.3s ease;
 }
@@ -91,7 +140,7 @@ body.dark-mode .theme-toggle {
 }
 
 :root {
-    --background-color: #ffffff;
+    --background-color: #E9E9F5;
     --text-color: #333333;
 }
 
@@ -112,4 +161,16 @@ body {
     cursor: pointer;
     color: var(--text-color);
     font-size: 1.2rem;
+}
+
+.dark-theme .intro {
+    background: linear-gradient(50deg, white, #A8B5C3);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.dark-theme .p_intro {
+    background: linear-gradient(50deg, white, #A8B5C3);
+    -webkit-background-clip: text;
+    background-clip: text;
 }
