@@ -219,12 +219,71 @@ body {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    main {
+        padding-top: 80px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .navbar {
+            width: 95%;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    
+        .nav-links {
+            gap: 0.8rem;
+            padding: 0.5rem;
+            font-size: 0.75rem;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+    }
+
+    .intro {
+        font-size: 2.2rem;
+    }
+
+    .p_intro {
+        font-size: 1.1rem;
+        padding: 0 10px;
+    }
+
     .social-buttons {
-        flex-direction: column;
-        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 0.8rem;
+        justify-content: center;
     }
     
     .social-btn {
-        width: 200px;
+        width: fit-content;
+        min-width: min-content;
+        padding: 0.5rem 1rem;
+    }
+
+    .email {
+        grid-column: 1 / -1;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding-top: 70px;
+    }
+
+    .intro {
+        font-size: 1.8rem;
+    }
+
+    .p_intro {
+        font-size: 1rem;
+    }
+
+    .social-btn {
+        font-size: 0.85rem;
     }
 }
