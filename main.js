@@ -29,4 +29,20 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('theme', 'light');
         }
     });
+
+    document.querySelector('.show-more-btn').addEventListener('click', function() {
+        const extendedGrid = document.querySelector('.extended-tech-grid');
+        extendedGrid.classList.toggle('active');
+        
+        const btnText = this.querySelector('span');
+        const btnIcon = this.querySelector('i');
+        
+        if (extendedGrid.classList.contains('active')) {
+            btnText.textContent = 'Ver menos';
+            btnIcon.classList.replace('bi-plus-circle', 'bi-dash-circle');
+        } else {
+            btnText.textContent = 'Ver más';
+            btnIcon.classList.replace('bi-dash-circle', 'bi-plus-circle');
+        }
+    });
 });
