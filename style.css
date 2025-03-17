@@ -437,6 +437,75 @@ body {
     padding: 0 20px;
 }
 
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    width: 100%;
+    padding: 2rem 0;
+}
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.tech-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.tech-item:hover img {
+    transform: translateY(-8px);
+}
+
+.tech-item span {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+}
+
+.tech-item:hover span {
+    opacity: 1;
+    transform: scale(1.05);
+    background: linear-gradient(45deg, var(--text-color), #4A5561);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.dark-theme .tech-item:hover span {
+    background: linear-gradient(45deg, #fff, #A8B5C3);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+@media (max-width: 768px) {
+    .tech-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .tech-item img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
 /* Dark theme adjustments */
 .dark-theme .section-title {
     background: linear-gradient(50deg, white, #A8B5C3);
