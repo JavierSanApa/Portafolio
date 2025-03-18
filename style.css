@@ -651,3 +651,128 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background: var(--text-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.3;
+}
+
+.timeline-item {
+    position: relative;
+    margin: 2rem 0;
+    width: 50%;
+    padding-right: 2rem;
+}
+
+.timeline-item:nth-child(even) {
+    margin-left: auto;
+    padding-right: 0;
+    padding-left: 2rem;
+}
+
+.timeline-dot {
+    position: absolute;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--text-color);
+    top: 0;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+    right: auto;
+    left: -10px;
+}
+
+.timeline-content {
+    background: transparent;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.timeline-content::after {
+    content: '↗';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover::after {
+    opacity: 0;
+}
+
+.timeline-content h3 {
+    padding-right: 30px;
+}
+
+/* Add a subtle pulse animation to the arrow on page load */
+@keyframes subtle-pulse {
+    0% { opacity: 0.5; }
+    50% { opacity: 0.8; }
+    100% { opacity: 0.5; }
+}
+
+.timeline-content::after {
+    animation: subtle-pulse 2s infinite;
+}
+
+.timeline-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+    background: linear-gradient(45deg, var(--text-color), #4A5561);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.timeline-date {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    opacity: 0.8;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-description {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover .timeline-description {
+    max-height: 200px;
+    opacity: 1;
+    margin-top: 1rem;
+}
+
+.timeline-content:hover {
+    transform: translateX(10px);
+}
+
+/* Dark theme adjustments */
+.dark-theme .timeline-content h3 {
+    background: linear-gradient(45deg, #fff, #A8B5C3);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
