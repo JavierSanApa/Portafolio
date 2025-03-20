@@ -776,3 +776,97 @@ body {
     -webkit-background-clip: text;
     background-clip: text;
 }
+
+.timeline-description a {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    background: var(--background-color);
+    border: 2px solid var(--text-color);
+    border-radius: 12px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    margin-bottom: 0.8rem;
+}
+
+.timeline-description a:hover {
+    background: var(--text-color);
+    color: var(--background-color);
+    transform: translateY(-2px);
+}
+
+/* Dark theme adjustment */
+.dark-theme .timeline-description a {
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 0;
+    }
+
+    .timeline-item:nth-child(even) {
+        margin-left: 0;
+        padding-left: 50px;
+    }
+
+    .timeline-dot {
+        left: 11px;
+        right: auto;
+    }
+
+    .timeline-item:nth-child(even) .timeline-dot {
+        left: 11px;
+    }
+
+    .timeline-content {
+        padding: 1rem;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.1rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        padding-right: 25px;
+    }
+
+    .timeline-content h4 {
+        font-size: 0.9rem;
+    }
+
+    .timeline-date {
+        font-size: 0.9rem;
+    }
+
+    /* Remove these properties to restore hover effect */
+    .timeline-description {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+    }
+
+    .timeline-description p {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    /* Keep hover effect */
+    .timeline-content:hover {
+        transform: translateX(10px);
+    }
+
+    .timeline-content:hover .timeline-description {
+        max-height: 500px; /* Increased to accommodate more content */
+        opacity: 1;
+        margin-top: 1rem;
+    }
+}
