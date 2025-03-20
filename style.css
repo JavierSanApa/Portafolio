@@ -370,8 +370,27 @@ body {
 }
 
 .project-text p {
+    max-height: 100px;
+    overflow: hidden;
     margin-bottom: 1.5rem;
     line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+.project-content:hover .project-text p {
+    max-height: 500px;
+}
+
+/* Adjust mobile styles */
+@media (max-width: 768px) {
+    .project-text p {
+        max-height: 80px;
+        font-size: 0.9rem;
+    }
+
+    .project-content:hover .project-text p {
+        max-height: 800px;
+    }
 }
 
 .project-image {
