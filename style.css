@@ -921,3 +921,78 @@ body {
         margin-bottom: 0.8rem;
     }
 }
+
+.aboutme-image {
+    flex: 0.8;
+    max-width: 350px;
+    position: sticky;
+    top: 100px;
+}
+
+.aboutme-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+/* Common styles for sections with image and text */
+.intro-section, .sobremi-section {
+    margin: 4rem auto 0;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+/* Content containers */
+.intro-content, .aboutme-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+    padding: 2rem;
+}
+
+/* Text containers */
+.intro-text, .aboutmetext {
+    flex: 1.2;
+    order: 1;
+    text-align: left;
+}
+
+/* Image containers */
+.intro-image, .aboutme-image {
+    flex: 0.8;
+    max-width: 350px;
+    order: 2;
+}
+
+.intro-image img, .aboutme-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.intro-image img:hover, .aboutme-image img:hover {
+    transform: scale(1.02);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .intro-content, .aboutme-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .intro-text, .aboutmetext {
+        order: 2;
+        text-align: center;
+    }
+
+    .intro-image, .aboutme-image {
+        order: 1;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
