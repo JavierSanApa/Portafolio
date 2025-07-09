@@ -384,12 +384,8 @@ body {
 /* Adjust mobile styles */
 @media (max-width: 768px) {
     .project-text p {
-        max-height: 80px;
+        max-height: none; /* Mostrar todo el texto en móvil */
         font-size: 0.9rem;
-    }
-
-    .project-content:hover .project-text p {
-        max-height: 800px;
     }
 }
 
@@ -866,11 +862,12 @@ body {
         font-size: 0.9rem;
     }
 
-    /* Remove these properties to restore hover effect */
+    /* Mostrar descripción por defecto en móvil */
     .timeline-description {
-        max-height: 0;
-        opacity: 0;
-        overflow: hidden;
+        max-height: 500px; /* Suficiente para mostrar contenido */
+        opacity: 1;
+        margin-top: 1rem;
+        overflow: visible;
     }
 
     .timeline-description p {
@@ -878,15 +875,8 @@ body {
         line-height: 1.5;
     }
 
-    /* Keep hover effect */
     .timeline-content:hover {
         transform: translateX(10px);
-    }
-
-    .timeline-content:hover .timeline-description {
-        max-height: 500px; /* Increased to accommodate more content */
-        opacity: 1;
-        margin-top: 1rem;
     }
 }
 .aboutmetext {
