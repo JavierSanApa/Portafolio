@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => { // Un solo listener para todo
     const themeToggle = document.getElementById('theme-toggle');
     const sunIcon = document.getElementById('sun-icon');
     const moonIcon = document.getElementById('moon-icon');
@@ -30,31 +30,50 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    document.querySelector('.show-more-btn').addEventListener('click', function() {
-        const extendedGrid = document.querySelector('.extended-tech-grid');
-        extendedGrid.classList.toggle('active');
-        
-        const btnText = this.querySelector('span');
-        const btnIcon = this.querySelector('i');
-        
-        if (extendedGrid.classList.contains('active')) {
-            btnText.textContent = 'Ver menos';
-            btnIcon.classList.replace('bi-plus-circle', 'bi-dash-circle');
-        } else {
-            btnText.textContent = 'Ver más';
-            btnIcon.classList.replace('bi-dash-circle', 'bi-plus-circle');
-        }
-    });
-});
+    // Lógica para el botón "Ver más" en Habilidades
+    const showMoreBtn = document.querySelector('.show-more-btn');
+    if (showMoreBtn) {
+        showMoreBtn.addEventListener('click', function() {
+            const extendedGrid = document.querySelector('.extended-tech-grid');
+            extendedGrid.classList.toggle('active');
+            
+            const btnText = this.querySelector('span');
+            const btnIcon = this.querySelector('i');
+            
+            if (extendedGrid.classList.contains('active')) {
+                btnText.textContent = 'Ver menos';
+                btnIcon.classList.replace('bi-plus-circle', 'bi-dash-circle');
+            } else {
+                btnText.textContent = 'Ver más';
+                btnIcon.classList.replace('bi-dash-circle', 'bi-plus-circle');
+            }
+        });
+    }
 
-document.addEventListener('DOMContentLoaded', function() {
-    const navbar = document.querySelector('.navbar');
-    
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
+    // Lógica para los botones "Leer más"
+    const readMoreButtons = document.querySelectorAll('.read-more-btn');
+    readMoreButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const textContainer = button.parentElement;
+            textContainer.classList.toggle('expanded');
+            
+            if (textContainer.classList.contains('expanded')) {
+                button.textContent = 'Leer menos';
+            } else {
+                button.textContent = 'Leer más';
+            }
+        });
     });
+
+    // Lógica para el scroll de la barra de navegación
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    }
 });

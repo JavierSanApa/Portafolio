@@ -377,8 +377,34 @@ body {
 
 /* Adjust mobile styles */
 @media (max-width: 768px) {
+    /* Truncate text by default on mobile */
     .project-text p {
+        max-height: 85px; /* Adjust this value to show desired lines */
+        overflow: hidden;
+        position: relative;
         font-size: 0.9rem;
+    }
+
+    /* Style for the expanded text */
+    .project-text.expanded p {
+        max-height: 800px; /* Large enough for any content */
+    }
+
+    /* Style for the "Read More" button */
+    .read-more-btn {
+        background: none;
+        border: 1px solid var(--text-color);
+        color: var(--text-color);
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+        cursor: pointer;
+        font-weight: 600;
+        margin-top: 0.5rem;
+        transition: all 0.3s ease;
+    }
+    .read-more-btn:hover {
+        background: var(--text-color);
+        color: var(--background-color);
     }
 }
 
@@ -390,6 +416,10 @@ body {
         }
         .project-content:hover .project-text p {
             max-height: 500px;
+        }
+        /* Hide the button on desktop */
+        .read-more-btn {
+            display: none;
         }
     }
 
@@ -777,6 +807,11 @@ body {
     transition: all 0.3s ease;
 }
 
+.timeline-description p {
+    transition: all 0.3s ease;
+    line-height: 1.6;
+}
+
 .timeline-content:hover {
     transform: translateX(10px);
 }
@@ -874,14 +909,19 @@ body {
 
     /* Mostrar descripción por defecto en móvil */
     .timeline-description {
-        /* The description is now visible by default (mobile-first). */
-        /* This rule ensures content is not clipped if it overflows somehow. */
-        overflow: visible; 
+        overflow: hidden;
     }
 
     .timeline-description p {
+        max-height: 65px; /* Truncate by default */
+        overflow: hidden;
         font-size: 0.85rem;
         line-height: 1.5;
+    }
+
+    /* Style for the expanded timeline description */
+    .timeline-description.expanded p {
+        max-height: 500px;
     }
 }
 .aboutmetext {
