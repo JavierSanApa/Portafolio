@@ -854,17 +854,43 @@ body {
 /* Dark theme adjustments */
 /* Hover effect for timeline only on desktop */
 @media (min-width: 769px) {
+
     .timeline-description {
         max-height: 0;
         opacity: 0;
         overflow: hidden;
         margin-top: 0;
+        transition: all 0.3s ease;
     }
 
     .timeline-content:hover .timeline-description {
-        max-height: 200px;
+        max-height: 260px;
         opacity: 1;
         margin-top: 1rem;
+        overflow-y: auto;
+        padding-right: 0.4rem;
+        scrollbar-gutter: stable;
+    }
+
+    .timeline-content:hover .timeline-description::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .timeline-content:hover .timeline-description::-webkit-scrollbar-thumb {
+        background: color-mix(in srgb,
+                var(--text-color) 35%,
+                transparent);
+        border-radius: 999px;
+    }
+
+    .timeline-content:hover .timeline-description::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .timeline-content:hover .timeline-description {
+        scrollbar-width: thin;
+        scrollbar-color:
+            color-mix(in srgb, var(--text-color) 35%, transparent) transparent;
     }
 }
 
