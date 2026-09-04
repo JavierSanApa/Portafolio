@@ -1,414 +1,471 @@
 <!DOCTYPE html>
 <html lang="es" class="no-js">
-    <head>
-        <!-- Metas -->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- Titulo -->
-        <title>Javier Sánchez Dev.</title>
-        <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+<head>
+    <!-- Metas -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- Links -->
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;800&display=swap">
-        <!-- Iconos para el modo oscuro/claro -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    </head>
-    <body>
-        <header>
-            <nav class="navbar">
-                <ul class="nav-links">
-                    <li><a href="#proyectos">Proyectos</a></li>
-                    <li><a href="#experiencialaboral">E.Laboral</a></li>
-                    <li><a href="#educacion">Educación</a></li>
-                    <li><a href="#sobre-mi"> Sobre mí</a></li>
-                    <li><a href="mailto:javisncz2000@gmail.com"> Contacto</a></li>
-                    <li>
-                        <button id="theme-toggle" class="theme-toggle">
-                            <i class="bi bi-sun-fill"  id="sun-icon"></i>
-                            <i class="bi bi-moon-fill" id="moon-icon"></i>
-                        </button>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+    <!-- Titulo -->
+    <title>Javier Sánchez Dev.</title>
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
 
-        <section class="intro-section">
-            <div class="intro-content">
-                <div class="intro-text">
-                    <h1 class="intro">Hola, soy Javi</h1>
-                    <p class="p_intro">
-                        Desarrollador Full Stack Junior | IA y Automatización<br>
-                        Apasionado por la tecnología, la creatividad y los retos. Siempre en busca de seguir aprendiendo y creciendo.
-                    </p>
-                    <div class="social-buttons">
-                        <a href="https://www.linkedin.com/in/javier-s%C3%A1nchez-aparicio-8a736b253/" target="_blank" class="social-btn linkedin">
-                            <img src="assets/icons/linkedin.svg" alt="LinkedIn">
-                            LinkedIn
-                        </a>
-                        <a href="assets/CV_JavierSanchez.pdf" target="_blank" class="social-btn cv">
-                            <img src="assets/icons/cv.svg" alt="CV">
-                            CV
-                        </a>
-                        <a href="mailto:javisncz2000@gmail.com" class="social-btn email">
-                            <img src="assets/icons/email.svg" alt="Email">
-                            javisncz2000@gmail.com
-                        </a>
-                    </div>
-                </div>
-                <div class="intro-image">
-                    <img src="assets/img/Fotos/intro.jpg" alt="Javier Sánchez">
+    <!-- Links -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;800&display=swap">
+    <!-- Iconos para el modo oscuro/claro -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#experiencialaboral">E.Laboral</a></li>
+                <li><a href="#educacion">Educación</a></li>
+                <li><a href="#sobre-mi"> Sobre mí</a></li>
+                <li><a href="mailto:javisncz2000@gmail.com"> Contacto</a></li>
+                <li>
+                    <button id="theme-toggle" class="theme-toggle">
+                        <i class="bi bi-sun-fill" id="sun-icon"></i>
+                        <i class="bi bi-moon-fill" id="moon-icon"></i>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="intro-section">
+        <div class="intro-content">
+            <div class="intro-text">
+                <h1 class="intro">Hola, soy Javi</h1>
+                <p class="p_intro">
+                    Desarrollador Full Stack Junior | IA y Automatización<br>
+                    Apasionado por la tecnología, la creatividad y los retos. Siempre en busca de seguir aprendiendo y
+                    creciendo.
+                </p>
+                <div class="social-buttons">
+                    <a href="https://www.linkedin.com/in/javier-s%C3%A1nchez-aparicio-8a736b253/" target="_blank"
+                        class="social-btn linkedin">
+                        <img src="assets/icons/linkedin.svg" alt="LinkedIn">
+                        LinkedIn
+                    </a>
+                    <a href="assets/CV_JavierSanchez.pdf" target="_blank" class="social-btn cv">
+                        <img src="assets/icons/cv.svg" alt="CV">
+                        CV
+                    </a>
+                    <a href="mailto:javisncz2000@gmail.com" class="social-btn email">
+                        <img src="assets/icons/email.svg" alt="Email">
+                        javisncz2000@gmail.com
+                    </a>
                 </div>
             </div>
-        </section>
+            <div class="intro-image">
+                <img src="assets/img/Fotos/intro.jpg" alt="Javier Sánchez">
+            </div>
+        </div>
+    </section>
 
-        <section id="proyectos" class="projects-section">
-            <h2 class="section-title">
-                <img src="assets/icons/proyectos.svg" alt="Proyectos">
-                Proyectos
-            </h2>
-            <div class="project-card">
-                <div class="project-content">
-                    <div class="project-text">
-                        <h3>CODI Transport</h3>
-                        <p>
-                            CODI Transport es una aplicación web desarrollada para optimizar la gestión del transporte escolar,
-                            permitiendo a los responsables controlar la asistencia de los niños en cada turno de manera rápida,
-                            intuitiva y accesible desde cualquier dispositivo. Proporcionando una experiencia moderna, fluida y totalmente responsive. 
-                            <br>
-                            🔐 <strong>Roles de usuario:</strong><br>
-                            • <strong>Responsable:</strong> Puede ver únicamente a los niños asignados a su cuenta, marcando asistencia, reseteando estados con un clic, eliminando y añadiendo nuevos niños.<br>
-                            • <strong>Administrador:</strong> Accede a todos los turnos y registros, pudiendo insertar nuevos niños mediante un formulario conectado directamente a Firestore.
-                            <br><br>
-                            🧭 <strong>Objetivo del proyecto:</strong><br>
-                            Facilitar la organización y control del transporte escolar mediante una herramienta digital accesible,
-                            mejorando la comunicación entre administradores y responsables, y ofreciendo una gestión centralizada y en tiempo real.
-                        </p>
-                        <button class="read-more-btn">Leer más</button>
-                        <div class="project-buttons">
+    <section id="proyectos" class="projects-section">
+        <h2 class="section-title">
+            <img src="assets/icons/proyectos.svg" alt="Proyectos">
+            Proyectos
+        </h2>
+        <div class="project-card">
+            <div class="project-content">
+                <div class="project-text">
+                    <h3>CODI Transport</h3>
+                    <p>
+                        CODI Transport es una <strong>aplicación web para la gestión del transporte escolar</strong>,
+                        diseñada para controlar la asistencia de los alumnos en cada turno de forma rápida, sencilla y
+                        accesible desde cualquier dispositivo.
+                        <br><br>
+                        🔐 <strong>Gestión de usuarios:</strong><br>
+                        El sistema cuenta con <strong>autenticación y diferentes roles</strong>. Los responsables
+                        gestionan únicamente los alumnos asignados a su cuenta, mientras que los administradores
+                        disponen de acceso global y pueden gestionar los diferentes registros.
+                        <br><br>
+                        🔥 <strong>Firebase:</strong><br>
+                        La aplicación utiliza <strong>Firebase Authentication y Firestore</strong> para gestionar los
+                        usuarios y almacenar y actualizar la información en tiempo real.
+                        <br><br>
+                        🛠️ <strong>Tecnologías:</strong><br>
+                        HTML5, CSS3, JavaScript, Firebase Authentication y Firestore.
+                    </p>
+                    <button class="read-more-btn">Leer más</button>
+                    <div class="project-buttons">
                         <a href="assets/Guia de Uso - Codi Transport.pdf" target="_blank" class="project-btn demo">
                             <img src="assets/icons/demo.svg" alt="Demo">
                             Guía
                         </a>
-                        <a href="https://github.com/JavierSanApa/School-Transport" target="_blank" class="project-btn github">
+                        <a href="https://github.com/JavierSanApa/School-Transport" target="_blank"
+                            class="project-btn github">
                             <img src="assets/icons/github.svg" alt="GitHub">
                             GitHub
                         </a>
-                        </div>
-                    </div>
-                    <div class="project-image">
-                        <img src="assets/img/proyects/Codi Transport.png" alt="CODI Transport Preview">
                     </div>
                 </div>
+                <div class="project-image">
+                    <img src="assets/img/proyects/Codi Transport.png" alt="CODI Transport Preview">
+                </div>
             </div>
+        </div>
 
-            <div class="project-card">
-                <div class="project-content">
-                    <div class="project-text">
-                        <h3>StreetVibesShop</h3>
-                        <p>StreetVibesShop es mi Trabajo de Fin de Grado, una tienda online de moda urbana que permite explorar productos, gestionar compras y realizar pedidos de forma intuitiva.
-                            Desarrollado con Symfony en el backend, usa Doctrine y phpMyAdmin para la base de datos, Apache como servidor y GitHub para control de versiones. En el frontend, empleé Twig y Bootstrap para una interfaz responsive.
-                            
-                            <br>🔐 Roles de Usuario:<br>
-                            Administrador: Acceso completo y gestión mediante EasyAdmin.
-                            
-                            Manager: Visualización de reportes de ventas y analíticas.
-                            
-                            <br>📽️ Demo del Proyecto<br>
-                            El video demostración es la continuación de mi presentación del TFG, donde explico el funcionamiento de la plataforma en detalle.</p>
+        <div class="project-card">
+            <div class="project-content">
+                <div class="project-text">
+                    <h3>StreetVibesShop</h3>
+                    <p>
+                        StreetVibesShop es una <strong>tienda online de moda urbana</strong> desarrollada como Trabajo
+                        de Fin de Grado, construida con <strong>Symfony</strong> siguiendo una arquitectura MVC. Incluye
+                        catálogo de productos, gestión de usuarios, carrito y proceso de compra.
+                        <br><br>
+                        🔐 <strong>Roles y administración:</strong><br>
+                        Cuenta con diferentes niveles de acceso. El panel desarrollado con <strong>EasyAdmin</strong>
+                        permite gestionar productos, usuarios y pedidos, mientras que el rol Manager dispone de acceso a
+                        información y reportes de ventas.
+                        <br><br>
+                        ⚙️ <strong>Desarrollo Full Stack:</strong><br>
+                        Utiliza <strong>Doctrine y MySQL</strong> para la gestión y persistencia de datos, junto con
+                        <strong>Twig y Bootstrap</strong> para crear una interfaz responsive.
+                        <br><br>
+                        🛠️ <strong>Tecnologías:</strong><br>
+                        Symfony, PHP, Doctrine, MySQL, Twig, Bootstrap y EasyAdmin.
+                    </p>
+                    <button class="read-more-btn">Leer más</button>
+                    <div class="project-buttons">
+                        <a href="https://youtu.be/cKLI_9qGNbM" target="_blank" class="project-btn demo">
+                            <img src="assets/icons/demo.svg" alt="Demo">
+                            Demo
+                        </a>
+                        <a href="https://github.com/JavierSanApa/StreetVibesShop" target="_blank"
+                            class="project-btn github">
+                            <img src="assets/icons/github.svg" alt="GitHub">
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="project-image">
+                    <img src="assets/img/proyects/tfg.PNG" alt="Project Preview">
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-content">
+                <div class="project-text">
+                    <h3>Clon de Spotify</h3>
+                    <p>
+                        Aplicación web desarrollada como proyecto académico para recrear las principales funcionalidades
+                        de una
+                        <strong>plataforma de streaming de música</strong>, con una interfaz inspirada en Spotify.
+                        <br><br>
+
+                        🎵 <strong>Funcionalidades:</strong><br>
+                        Incluye reproducción de canciones, control de volumen, gestión de listas de reproducción y
+                        diferentes
+                        funcionalidades relacionadas con la gestión de usuarios.
+                        <br><br>
+
+                        💻 <strong>Frontend y Backend:</strong><br>
+                        El proyecto combina <strong>Angular en el frontend y Node.js en el backend</strong>,
+                        incorporando
+                        autenticación, validación de usuarios y una estructura backend para gestionar las peticiones.
+                        <br><br>
+
+                        🚀 <strong>Desarrollo:</strong><br>
+                        Partiendo de un proyecto guiado, amplié la aplicación con <strong>funcionalidades
+                            propias</strong> y mejoras
+                        adicionales que explico con más detalle en la
+                        <a href="assets/Documentación Spotify.pdf" target="_blank">documentación del proyecto</a>.
+                        <br><br>
+
+                        🛠️ <strong>Tecnologías:</strong><br>
+                        Angular, TypeScript/JavaScript, Node.js, HTML y CSS.
+                    </p>
+                    <button class="read-more-btn">Leer más</button>
+                    <div class="project-buttons">
+                        <a href="https://youtu.be/cnnfRbqEuP0" target="_blank" class="project-btn demo">
+                            <img src="assets/icons/demo.svg" alt="Demo">
+                            Demo
+                        </a>
+                        <a href="https://github.com/JavierSanApa/Spotify" target="_blank" class="project-btn github">
+                            <img src="assets/icons/github.svg" alt="GitHub">
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="project-image">
+                    <img src="assets/img/proyects/Spotify.PNG" alt="Project Preview">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experiencialaboral" class="educacion-section">
+        <h2 class="section-title">
+            <img src="assets/icons/experiencialaboral.svg" alt="Educación">
+            Experiencia Laboral
+        </h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Desarrollador Web y Formador en Competencias Digitales</h3>
+                    <h4>Asociación Barró </h4>
+                    <p class="timeline-date">Septiembre 2025 - Marzo 2026</p>
+                    <div class="timeline-description">
+                        <p>
+                            ● Desarrollo de una aplicación web para gestionar recursos e inscripciones.<br>
+                            ● Automatización de procesos con Python y Google Apps Script.<br>
+                            ● Formación en IA y competencias digitales.
+                        </p>
                         <button class="read-more-btn">Leer más</button>
-                        <div class="project-buttons">
-                            <a href="https://youtu.be/cKLI_9qGNbM" target="_blank" class="project-btn demo">
-                                <img src="assets/icons/demo.svg" alt="Demo">
-                                Demo
-                            </a>
-                            <a href="https://github.com/JavierSanApa/StreetVibesShop" target="_blank" class="project-btn github">
-                                <img src="assets/icons/github.svg" alt="GitHub">
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-image">
-                        <img src="assets/img/proyects/tfg.PNG" alt="Project Preview">
                     </div>
                 </div>
             </div>
-
-            <div class="project-card">
-                <div class="project-content">
-                    <div class="project-text">
-                        <h3>Clon de Spotify</h3>
-                        <p>Este proyecto es una implementación de un clon de Spotify, realizado como parte de un proyecto guiado.
-                            Utilizando Angular en el frontend y Node.js en el backend, el objetivo fue recrear una interfaz similar a la de Spotify con funcionalidades
-                            esenciales como reproducción de canciones, control de volumen y gestión de listas de reproducción.<br>
-                            También se integraron medidas de autenticación, validación de usuarios, y se implementó una estructura de backend con Node.js para gestionar las peticiones.<br>
-                            Además de seguir el tutorial marcaddo por el profesor, añadí varias características personalizadas al proyecto que explico en esta <a href="assets/Documentación Spotify.pdf" target="_blank">documentación</a>.</p>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Prácticas Desarrollador Web </h3>
+                    <h4>Compañía Instrumentación Y Control SI </h4>
+                    <p class="timeline-date">Abril 2024 - Junio 2024</p>
+                    <div class="timeline-description">
+                        <p>
+                            ● Desarrollo de una aplicación web con HTML, CSS, JavaScript y PHP.<br>
+                            ● Implementación de funcionalidades backend y bases de datos.<br>
+                            ● Gestión de usuarios y control de acceso.<br>
+                            ● Uso de Git y GitHub para el control de versiones.
+                        </p>
                         <button class="read-more-btn">Leer más</button>
-                        <div class="project-buttons">
-                            <a href="https://youtu.be/cnnfRbqEuP0" target="_blank" class="project-btn demo">
-                                <img src="assets/icons/demo.svg" alt="Demo">
-                                Demo
-                            </a>
-                            <a href="https://github.com/JavierSanApa/Spotify" target="_blank" class="project-btn github">
-                                <img src="assets/icons/github.svg" alt="GitHub">
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-image">
-                        <img src="assets/img/proyects/Spotify.PNG" alt="Project Preview">
                     </div>
                 </div>
             </div>
-        </section>
 
-        <section id="experiencialaboral" class="educacion-section">
-            <h2 class="section-title">
-                <img src="assets/icons/experiencialaboral.svg" alt="Educación">
-                Experiencia Laboral
-            </h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Desarrollador Web y Formador en Competencias Digitales</h3>
-                        <h4>Asociación Barró </h4>
-                        <p class="timeline-date">Septiembre 2025 - Marzo 2026</p>
-                        <div class="timeline-description">
-                            <p>
-                                ● Desarrollo de una aplicación web para gestionar recursos e inscripciones.<br>
-                                ● Automatización de procesos con Python y Google Apps Script.<br>
-                                ● Formación en IA y competencias digitales.
-                            </p>
-                            <button class="read-more-btn">Leer más</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Prácticas Desarrollador Web </h3>
-                        <h4>Compañía Instrumentación Y Control SI </h4>
-                        <p class="timeline-date">Abril 2024 - Junio 2024</p>
-                        <div class="timeline-description">
-                            <p> 
-                                ● Desarrollo de una aplicación web con HTML, CSS, JavaScript y PHP.<br>
-                                ● Implementación de funcionalidades backend y bases de datos.<br>
-                                ● Gestión de usuarios y control de acceso.<br>
-                                ● Uso de Git y GitHub para el control de versiones.
-                            </p>
-                            <button class="read-more-btn">Leer más</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Prácticas Técnico Imagen y Sonido </h3>
-                        <h4>Escuela CES</h4>
-                        <p class="timeline-date">Mayo 2020 - Junio 2020</p>
-                        <div class="timeline-description">
-                            <p> ● Edición de video, audio y fotografía: Adobe Premiere, Audacity, Adobe Photoshop<br>
-                                ● Montaje de iluminación, sonido y vídeo para eventos y grabaciones.
-                            </p>
-                            <button class="read-more-btn">Leer más</button>
-                        </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Prácticas Técnico Imagen y Sonido </h3>
+                    <h4>Escuela CES</h4>
+                    <p class="timeline-date">Mayo 2020 - Junio 2020</p>
+                    <div class="timeline-description">
+                        <p> ● Edición de video, audio y fotografía: Adobe Premiere, Audacity, Adobe Photoshop<br>
+                            ● Montaje de iluminación, sonido y vídeo para eventos y grabaciones.
+                        </p>
+                        <button class="read-more-btn">Leer más</button>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="habilidades-section">
-            <h2 class="section-title">
-                <img src="assets/icons/habilidades.svg" alt="Habilidades">
-                Habilidades
-            </h2>
-            <div class="tech-grid">
-                <div class="tech-item">
-                    <img src="assets/img/habilidades/HTML5.png" alt="HTML">
-                    <span>HTML5</span>
-                </div>
-                <div class="tech-item">
-                    <img src="assets/img/habilidades/CSS3.png" alt="CSS">
-                    <span>CSS3</span>
-                </div>
-                <div class="tech-item">
-                    <img src="assets/img/habilidades/javascript.png" alt="JavaScript">
-                    <span>JavaScript</span>
-                </div>
-                <div class="tech-item">
-                    <img src="assets/img/habilidades/java.png" alt="Java">
-                    <span>Java</span>
-                </div>
-                <div class="tech-item">
-                    <img src="assets/img/habilidades/Python.png" alt="Python">
-                    <span>Python</span>
-                </div>
-                <div class="tech-item">
-                    <img src="assets/img/habilidades/PHP.png" alt="PHP">
-                    <span>PHP</span>
-                </div>
-                <div class="tech-item">
-                    <img src="assets/img/habilidades/symfony.png" alt="Symfony">
-                    <span>Symfony</span>
-                </div>
-                <div class="tech-item show-more">
-                    <button class="show-more-btn">
-                        <i class="bi bi-plus-circle"></i>
-                        <span>Ver más</span>
-                    </button>
-                </div>
+    <section class="habilidades-section">
+        <h2 class="section-title">
+            <img src="assets/icons/habilidades.svg" alt="Habilidades">
+            Habilidades
+        </h2>
+        <div class="tech-grid">
+            <div class="tech-item">
+                <img src="assets/img/habilidades/HTML5.png" alt="HTML">
+                <span>HTML5</span>
             </div>
-            <div class="extended-tech-grid">
-                <div class="tech-item">
-                    <img src="assets/img/habilidades/mysql.png" alt="MySQL">
-                    <span>MySQL</span>
-                </div>
-                <div class="tech-item">
-                    <img src="assets/img/habilidades/Firebase.png" alt="Firebase">
-                    <span>Firebase</span>
-                </div>
-                <div class="tech-item">
-                    <img src="assets/img/habilidades/photoshop.png" alt="Photoshop">
-                    <span>Adobe Photoshop</span>
-                </div>
-                <div class="tech-item">
-                    <img src="assets/img/habilidades/premiere.png" alt="Premiere">
-                    <span>Adobe Premiere</span>
-                </div>
-                <div class="tech-item">
-                    <img src="assets/img/habilidades/github.png" alt="GitHUb">
-                    <span>GitHub</span>
-                </div>
+            <div class="tech-item">
+                <img src="assets/img/habilidades/CSS3.png" alt="CSS">
+                <span>CSS3</span>
             </div>
-        </section>
+            <div class="tech-item">
+                <img src="assets/img/habilidades/javascript.png" alt="JavaScript">
+                <span>JavaScript</span>
+            </div>
+            <div class="tech-item">
+                <img src="assets/img/habilidades/java.png" alt="Java">
+                <span>Java</span>
+            </div>
+            <div class="tech-item">
+                <img src="assets/img/habilidades/Python.png" alt="Python">
+                <span>Python</span>
+            </div>
+            <div class="tech-item">
+                <img src="assets/img/habilidades/PHP.png" alt="PHP">
+                <span>PHP</span>
+            </div>
+            <div class="tech-item">
+                <img src="assets/img/habilidades/symfony.png" alt="Symfony">
+                <span>Symfony</span>
+            </div>
+            <div class="tech-item show-more">
+                <button class="show-more-btn">
+                    <i class="bi bi-plus-circle"></i>
+                    <span>Ver más</span>
+                </button>
+            </div>
+        </div>
+        <div class="extended-tech-grid">
+            <div class="tech-item">
+                <img src="assets/img/habilidades/mysql.png" alt="MySQL">
+                <span>MySQL</span>
+            </div>
+            <div class="tech-item">
+                <img src="assets/img/habilidades/Firebase.png" alt="Firebase">
+                <span>Firebase</span>
+            </div>
+            <div class="tech-item">
+                <img src="assets/img/habilidades/photoshop.png" alt="Photoshop">
+                <span>Adobe Photoshop</span>
+            </div>
+            <div class="tech-item">
+                <img src="assets/img/habilidades/premiere.png" alt="Premiere">
+                <span>Adobe Premiere</span>
+            </div>
+            <div class="tech-item">
+                <img src="assets/img/habilidades/github.png" alt="GitHUb">
+                <span>GitHub</span>
+            </div>
+        </div>
+    </section>
 
-        <section id="educacion" class="educacion-section">
-            <h2 class="section-title">
-                <img src="assets/icons/educacion.svg" alt="Educación">
-                Educación
-            </h2>
-            <div class="timeline">
+    <section id="educacion" class="educacion-section">
+        <h2 class="section-title">
+            <img src="assets/icons/educacion.svg" alt="Educación">
+            Educación
+        </h2>
+        <div class="timeline">
 
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Certificado Profesional de Ciberseguridad de Google</h3>
-                        <h4>Coursera Plus</h4>
-                        <p class="timeline-date">Formandome actualmente</p>
-                        <div class="timeline-description">
-                            <p>
-                                Actualmente amplío mis conocimientos en ciberseguridad, aprendiendo a proteger sistemas,
-                                redes y datos mediante gestión de riesgos, análisis de vulnerabilidades, 
-                                detección de amenazas y controles de seguridad para desarrollar aplicaciones más seguras.
-                            </p>
-                            <button class="read-more-btn">Leer más</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Certificado Profesional de Desarrollador de IA de IBM</h3>
-                        <h4>Coursera Plus</h4>
-                        <p class="timeline-date">2026</p>
-                        <div class="timeline-description">
-                            <p>
-                                Aprendí a desarrollar soluciones de inteligencia artificial utilizando Python y 
-                                herramientas de IA generativa. Trabajé con Machine Learning, LLMs, Prompt Engineering,
-                                RAG, agentes de IA e integración de APIs para crear aplicaciones inteligentes.
-                            </p>
-                            <button class="read-more-btn">Leer más</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Curso Google IA y productividad</h3>
-                        <h4>Santander Open Academy</h4>
-                        <p class="timeline-date">2025</p>
-                        <div class="timeline-description">
-                            <a href="assets/Certificado Google IA y productividad.pdf" target="_blank">Certificado</a>
-                            <p>Aprendí a mejorar la productividad mediante herramientas de IA, como Gemini, para automatizar tareas, generar ideas y resolver problemas
-                                de manera eficiente. Adquirí conocimientos básicos de IA y su aplicación práctica en el entorno laboral y personal.</p>
-                            <button class="read-more-btn">Leer más</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Grado Superior en Desarrollo de Aplicaciones Web</h3>
-                        <h4>IES El Cañaveral</h4>
-                        <p class="timeline-date">2024</p>
-                        <div class="timeline-description">
-                            <p>Aprendí a diseñar y desarrollar aplicaciones web completas, trabajando con HTML, CSS y JavaScript en el frontend
-                                para crear interfaces dinámicas y responsivas. En el backend, utilicé Java y PHP para gestionar la lógica de negocio y
-                                la conexión con bases de datos, desarrollando soluciones eficientes y funcionales.</p>
-                            <button class="read-more-btn">Leer más</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <h3>Grado Medio en Imagen y Sonido</h3>
-                        <h4>Escuela CES</h4>
-                        <p class="timeline-date">2020</p>
-                        <div class="timeline-description">
-                            <p>Aprendí a manejar equipos de sonido y mezcla, producción musical y edición de vídeo.
-                                Adquirí conocimientos sobre sonorización de eventos, grabación, postproducción y técnicas de DJ.</p>
-                            <button class="read-more-btn">Leer más</button>
-                        </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Certificado Profesional de Ciberseguridad de Google</h3>
+                    <h4>Coursera Plus</h4>
+                    <p class="timeline-date">Formandome actualmente</p>
+                    <div class="timeline-description">
+                        <p>
+                            Actualmente amplío mis conocimientos en ciberseguridad, aprendiendo a proteger sistemas,
+                            redes y datos mediante gestión de riesgos, análisis de vulnerabilidades,
+                            detección de amenazas y controles de seguridad para desarrollar aplicaciones más seguras.
+                        </p>
+                        <button class="read-more-btn">Leer más</button>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <section id="sobre-mi" class="sobremi-section">
-            <h2 class="section-title">
-                <img src="assets/icons/sobremi.svg" alt="Sobre mí">
-                Sobre mí
-            </h2>
-            <div class="aboutme-container">
-                <div class="aboutmetext">
-                    <p>
-                        Mi nombre es Javi, un desarrollador web apasionado por la tecnología y la creación de soluciones digitales eficientes. 
-                        Mi trayectoria comenzó en el mundo del sonido y la producción audiovisual, donde aprendí a trabajar con herramientas técnicas y a desarrollar una mentalidad creativa. 
-                        Sin embargo, mi verdadero interés por la informática me llevó a especializarme en el desarrollo de aplicaciones.
-                    </p>
-                    <p>
-                        Durante mi formación en el Grado Superior en Desarrollo de Aplicaciones Web, adquirí experiencia en tecnologías frontend como HTML, CSS y JavaScript, creando interfaces dinámicas y responsivas.
-                        En el backend, trabajé con Java y PHP, construyendo sistemas funcionales y optimizados para la gestión de datos y la lógica de negocio.
-                    </p>
-                    <p>
-                        Me considero una persona curiosa y en constante aprendizaje. Actualmente, complemento mis conocimientos viendo cursos y explorando nuevas tecnologías por mi cuenta,
-                        ya que creo que en este campo es fundamental seguir formándose para mejorar y crecer profesionalmente.
-                    </p>
-                    <p>
-                        Fuera del desarrollo, soy un apasionado del deporte y llevo jugando al fútbol desde que tengo uso de razón, además de practicar otros deportes diariamente.
-                        Esto me ha enseñado la importancia del trabajo en equipo, la disciplina y la constancia, valores que también aplico en mi día a día como desarrollador.
-                    </p>
-                    <p>
-                        Ahora mismo, mi objetivo es dar mis primeros pasos en el mundo laboral, aprender de profesionales con experiencia y seguir creciendo en el sector.
-                        Aspiro a mejorar constantemente, asumir nuevos retos y avanzar tanto a nivel profesional como personal.
-                    </p>
-                </div>
-                <div class="aboutme-image">
-                    <img src="assets/img/Fotos/sobremi.JPG" alt="Javier Sánchez">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Certificado Profesional de Desarrollador de IA de IBM</h3>
+                    <h4>Coursera Plus</h4>
+                    <p class="timeline-date">2026</p>
+                    <div class="timeline-description">
+                        <p>
+                            Aprendí a desarrollar soluciones de inteligencia artificial utilizando Python y
+                            herramientas de IA generativa. Trabajé con Machine Learning, LLMs, Prompt Engineering,
+                            RAG, agentes de IA e integración de APIs para crear aplicaciones inteligentes.
+                        </p>
+                        <button class="read-more-btn">Leer más</button>
+                    </div>
                 </div>
             </div>
-        </section>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Curso Google IA y productividad</h3>
+                    <h4>Santander Open Academy</h4>
+                    <p class="timeline-date">2025</p>
+                    <div class="timeline-description">
+                        <a href="assets/Certificado Google IA y productividad.pdf" target="_blank">Certificado</a>
+                        <p>Aprendí a mejorar la productividad mediante herramientas de IA, como Gemini, para automatizar
+                            tareas, generar ideas y resolver problemas
+                            de manera eficiente. Adquirí conocimientos básicos de IA y su aplicación práctica en el
+                            entorno laboral y personal.</p>
+                        <button class="read-more-btn">Leer más</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Grado Superior en Desarrollo de Aplicaciones Web</h3>
+                    <h4>IES El Cañaveral</h4>
+                    <p class="timeline-date">2024</p>
+                    <div class="timeline-description">
+                        <p>Aprendí a diseñar y desarrollar aplicaciones web completas, trabajando con HTML, CSS y
+                            JavaScript en el frontend
+                            para crear interfaces dinámicas y responsivas. En el backend, utilicé Java y PHP para
+                            gestionar la lógica de negocio y
+                            la conexión con bases de datos, desarrollando soluciones eficientes y funcionales.</p>
+                        <button class="read-more-btn">Leer más</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Grado Medio en Imagen y Sonido</h3>
+                    <h4>Escuela CES</h4>
+                    <p class="timeline-date">2020</p>
+                    <div class="timeline-description">
+                        <p>Aprendí a manejar equipos de sonido y mezcla, producción musical y edición de vídeo.
+                            Adquirí conocimientos sobre sonorización de eventos, grabación, postproducción y técnicas de
+                            DJ.</p>
+                        <button class="read-more-btn">Leer más</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre-mi" class="sobremi-section">
+        <h2 class="section-title">
+            <img src="assets/icons/sobremi.svg" alt="Sobre mí">
+            Sobre mí
+        </h2>
+        <div class="aboutme-container">
+            <div class="aboutmetext">
+                <p>
+                    Mi nombre es Javi, un desarrollador web apasionado por la tecnología y la creación de soluciones
+                    digitales eficientes.
+                    Mi trayectoria comenzó en el mundo del sonido y la producción audiovisual, donde aprendí a trabajar
+                    con herramientas técnicas y a desarrollar una mentalidad creativa.
+                    Sin embargo, mi verdadero interés por la informática me llevó a especializarme en el desarrollo de
+                    aplicaciones.
+                </p>
+                <p>
+                    Durante mi formación en el Grado Superior en Desarrollo de Aplicaciones Web, adquirí experiencia en
+                    tecnologías frontend como HTML, CSS y JavaScript, creando interfaces dinámicas y responsivas.
+                    En el backend, trabajé con Java y PHP, construyendo sistemas funcionales y optimizados para la
+                    gestión de datos y la lógica de negocio.
+                </p>
+                <p>
+                    Me considero una persona curiosa y en constante aprendizaje. Actualmente, complemento mis
+                    conocimientos viendo cursos y explorando nuevas tecnologías por mi cuenta,
+                    ya que creo que en este campo es fundamental seguir formándose para mejorar y crecer
+                    profesionalmente.
+                </p>
+                <p>
+                    Fuera del desarrollo, soy un apasionado del deporte y llevo jugando al fútbol desde que tengo uso de
+                    razón, además de practicar otros deportes diariamente.
+                    Esto me ha enseñado la importancia del trabajo en equipo, la disciplina y la constancia, valores que
+                    también aplico en mi día a día como desarrollador.
+                </p>
+                <p>
+                    Ahora mismo, mi objetivo es dar mis primeros pasos en el mundo laboral, aprender de profesionales
+                    con experiencia y seguir creciendo en el sector.
+                    Aspiro a mejorar constantemente, asumir nuevos retos y avanzar tanto a nivel profesional como
+                    personal.
+                </p>
+            </div>
+            <div class="aboutme-image">
+                <img src="assets/img/Fotos/sobremi.JPG" alt="Javier Sánchez">
+            </div>
+        </div>
+    </section>
 
     </main>
-        <script src="main.js"></script>
+    <script src="main.js"></script>
 
-    </body>
+</body>
+
 </html>
