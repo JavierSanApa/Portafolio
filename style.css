@@ -59,6 +59,7 @@ section {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -81,7 +82,8 @@ section {
 
 @media (min-width: 1024px) {
     main {
-        grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas grandes */
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 columnas en pantallas grandes */
     }
 }
 
@@ -222,8 +224,9 @@ body {
     fill: currentColor;
 }
 
-.dark-theme .social-btn img, .dark-theme .project-btn img,
-.dark-theme .section-title img{
+.dark-theme .social-btn img,
+.dark-theme .project-btn img,
+.dark-theme .section-title img {
     filter: brightness(0) invert(1);
 }
 
@@ -246,7 +249,7 @@ body {
             left: 50%;
             transform: translateX(-50%);
         }
-    
+
         .nav-links {
             gap: 0.8rem;
             padding: 0.5rem;
@@ -272,7 +275,7 @@ body {
         gap: 0.8rem;
         justify-content: center;
     }
-    
+
     .social-btn {
         width: fit-content;
         min-width: min-content;
@@ -348,17 +351,21 @@ body {
 
 .project-content {
     display: flex;
-    gap: 3rem; /* Increased gap */
+    gap: 3rem;
+    /* Increased gap */
     align-items: flex-start;
 }
 
 .project-image {
-    flex: 1.2; /* Increased from 1 to make image larger relative to text */
-    max-width: 500px; /* Increased from 400px */
+    flex: 1.2;
+    /* Increased from 1 to make image larger relative to text */
+    max-width: 500px;
+    /* Increased from 400px */
 }
 
 .project-text {
-    flex: 0.8; /* Decreased from 1 to balance with larger image */
+    flex: 0.8;
+    /* Decreased from 1 to balance with larger image */
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -377,9 +384,11 @@ body {
 
 /* Adjust mobile styles */
 @media (max-width: 768px) {
+
     /* Truncate text by default on mobile */
     .project-text p {
-        max-height: 85px; /* Adjust this value to show desired lines */
+        max-height: 85px;
+        /* Adjust this value to show desired lines */
         overflow: hidden;
         position: relative;
         font-size: 0.9rem;
@@ -387,7 +396,8 @@ body {
 
     /* Style for the expanded text */
     .project-text.expanded p {
-        max-height: 800px; /* Large enough for any content */
+        max-height: 800px;
+        /* Large enough for any content */
     }
 
     /* Style for the "Read More" button */
@@ -403,26 +413,53 @@ body {
         margin-bottom: 1rem;
         transition: all 0.3s ease;
     }
+
     .read-more-btn:hover {
         background: var(--text-color);
         color: var(--background-color);
     }
 }
 
-    /* Hover effect for project description only on desktop */
-    @media (min-width: 769px) {
-        .project-text p {
-            max-height: 100px;
-            overflow: hidden;
-        }
-        .project-content:hover .project-text p {
-            max-height: 500px;
-        }
-        /* Hide the button on desktop */
-        .read-more-btn {
-            display: none;
-        }
+/* Hover effect for project description only on desktop */
+@media (min-width: 769px) {
+    .project-text p {
+        max-height: 100px;
+        overflow: hidden;
+        padding-right: 0.4rem;
+        transition: max-height 0.35s ease;
     }
+
+    .project-content:hover .project-text p {
+        max-height: 280px;
+        overflow-y: auto;
+        scrollbar-gutter: stable;
+    }
+
+    .project-content:hover .project-text p::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .project-content:hover .project-text p::-webkit-scrollbar-thumb {
+        background: color-mix(in srgb,
+                var(--text-color) 35%,
+                transparent);
+        border-radius: 999px;
+    }
+
+    .project-content:hover .project-text p::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .project-content:hover .project-text p {
+        scrollbar-width: thin;
+        scrollbar-color:
+            color-mix(in srgb, var(--text-color) 35%, transparent) transparent;
+    }
+
+    .read-more-btn {
+        display: none;
+    }
+}
 
 .project-image {
     flex: 1;
@@ -545,6 +582,7 @@ body {
     background-clip: text;
     color: transparent;
 }
+
 .dark-theme .tech-item:hover span {
     background: linear-gradient(45deg, #fff, #A8B5C3);
     -webkit-background-clip: text;
@@ -556,7 +594,7 @@ body {
         grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;
     }
-    
+
     .tech-item img {
         width: 60px;
         height: 60px;
@@ -600,7 +638,8 @@ body {
 
     .project-image {
         max-width: 100%;
-        order: 0; /* Reset order for mobile */
+        order: 0;
+        /* Reset order for mobile */
     }
 
     .project-text {
@@ -677,6 +716,7 @@ body {
 .dark-theme .show-more-btn:hover {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
+
 .extended-tech-grid {
     display: none;
     grid-template-columns: repeat(4, 1fr);
@@ -701,6 +741,7 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
 .timeline {
     position: relative;
     max-width: 800px;
@@ -761,9 +802,17 @@ body {
 
 /* Add a subtle pulse animation to the arrow on page load */
 @keyframes subtle-pulse {
-    0% { opacity: 0.5; }
-    50% { opacity: 0.8; }
-    100% { opacity: 0.5; }
+    0% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
 }
 
 .timeline-content::after {
@@ -789,7 +838,7 @@ body {
 }
 
 .timeline-description {
-        margin-top: 1rem;
+    margin-top: 1rem;
     transition: all 0.3s ease;
 }
 
@@ -803,20 +852,22 @@ body {
 }
 
 /* Dark theme adjustments */
-    /* Hover effect for timeline only on desktop */
-    @media (min-width: 769px) {
-        .timeline-description {
-            max-height: 0;
-            opacity: 0;
-            overflow: hidden;
-            margin-top: 0;
-        }
-        .timeline-content:hover .timeline-description {
-            max-height: 200px;
-            opacity: 1;
-            margin-top: 1rem;
-        }
+/* Hover effect for timeline only on desktop */
+@media (min-width: 769px) {
+    .timeline-description {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        margin-top: 0;
     }
+
+    .timeline-content:hover .timeline-description {
+        max-height: 200px;
+        opacity: 1;
+        margin-top: 1rem;
+    }
+}
+
 .dark-theme .timeline-content h3 {
     background: linear-gradient(45deg, #fff, #A8B5C3);
     -webkit-background-clip: text;
@@ -899,7 +950,8 @@ body {
     }
 
     .timeline-description p {
-        max-height: 65px; /* Truncate by default */
+        max-height: 65px;
+        /* Truncate by default */
         overflow: hidden;
         font-size: 0.85rem;
         line-height: 1.5;
@@ -910,6 +962,7 @@ body {
         max-height: 500px;
     }
 }
+
 .aboutmetext {
     max-width: 800px;
     margin: 0 auto;
@@ -918,11 +971,13 @@ body {
 
 .aboutmetext p {
     margin-bottom: 0.5rem;
-    line-height: 1.5;  /* Increased for better readability */
+    line-height: 1.5;
+    /* Increased for better readability */
     font-size: 1.05rem;
     color: var(--text-color);
     opacity: 0.9;
-    text-align: left;  /* Changed from justify to left */
+    text-align: left;
+    /* Changed from justify to left */
     padding: 0.4rem;
     border-radius: 10px;
     transition: all 0.3s ease;
@@ -957,8 +1012,10 @@ body {
     object-fit: cover;
     transition: transform 0.3s ease;
 }
+
 /* Common styles for sections with image and text */
-.intro-section, .sobremi-section {
+.intro-section,
+.sobremi-section {
     margin: 4rem auto 0;
     width: 100%;
     max-width: 1200px;
@@ -966,7 +1023,8 @@ body {
 }
 
 /* Content containers */
-.intro-content, .aboutme-container {
+.intro-content,
+.aboutme-container {
     display: flex;
     align-items: flex-start;
     gap: 3rem;
@@ -974,20 +1032,23 @@ body {
 }
 
 /* Text containers */
-.intro-text, .aboutmetext {
+.intro-text,
+.aboutmetext {
     flex: 1.2;
     order: 1;
     text-align: left;
 }
 
 /* Image containers */
-.intro-image, .aboutme-image {
+.intro-image,
+.aboutme-image {
     flex: 0.8;
     max-width: 350px;
     order: 2;
 }
 
-.intro-image img, .aboutme-image img {
+.intro-image img,
+.aboutme-image img {
     width: 100%;
     height: auto;
     border-radius: 20px;
@@ -997,26 +1058,30 @@ body {
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
-    .aboutme-image{
+    .aboutme-image {
         top: 0;
     }
 
-    .intro-content, .aboutme-container {
+    .intro-content,
+    .aboutme-container {
         flex-direction: column;
         padding: 1rem;
     }
 
-    .intro-text, .aboutmetext {
+    .intro-text,
+    .aboutmetext {
         order: 2;
         text-align: center;
     }
 
-    .intro-image, .aboutme-image {
+    .intro-image,
+    .aboutme-image {
         order: 1;
         max-width: 300px;
         margin: 0 auto;
     }
 }
+
 .project-text p a {
     color: var(--text-color);
     text-decoration: none;
