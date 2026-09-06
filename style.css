@@ -538,76 +538,6 @@ body {
     padding: 0 20px;
 }
 
-.tech-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-    width: 100%;
-    padding: 2rem 0;
-}
-
-.tech-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-}
-
-.tech-item img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    transition: all 0.3s ease;
-}
-
-.tech-item:hover img {
-    transform: translateY(-8px);
-}
-
-.tech-item span {
-    font-weight: 700;
-    font-size: 1.1rem;
-    color: var(--text-color);
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
-    opacity: 0.8;
-}
-
-.tech-item:hover span {
-    opacity: 1;
-    transform: scale(1.05);
-    background: linear-gradient(45deg, var(--text-color), #4A5561);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-
-.dark-theme .tech-item:hover span {
-    background: linear-gradient(45deg, #fff, #A8B5C3);
-    -webkit-background-clip: text;
-    background-clip: text;
-}
-
-@media (max-width: 768px) {
-    .tech-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.5rem;
-    }
-
-    .tech-item img {
-        width: 60px;
-        height: 60px;
-    }
-}
-
-@media (max-width: 480px) {
-    .tech-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-    }
-}
-
 /* Dark theme adjustments */
 .dark-theme .section-title {
     background: linear-gradient(50deg, white, #A8B5C3);
@@ -717,28 +647,126 @@ body {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
+/* =========================
+   HABILIDADES
+   ========================= */
+
+.tech-grid,
 .extended-tech-grid {
-    display: none;
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     width: 100%;
     padding: 2rem 0;
+}
+
+/* Las habilidades adicionales están ocultas inicialmente */
+.extended-tech-grid {
+    display: none;
+    padding-top: 0;
     animation: fadeIn 0.5s ease-out;
 }
 
+/* Se muestran al pulsar "Ver más" */
 .extended-tech-grid.active {
     display: grid;
 }
 
+
+/* =========================
+   ELEMENTOS
+   ========================= */
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.tech-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.tech-item:hover img {
+    transform: translateY(-8px);
+}
+
+.tech-item span {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    opacity: 0.8;
+    min-height: 2.6rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tech-item:hover span {
+    opacity: 1;
+    transform: scale(1.05);
+    background: linear-gradient(45deg, var(--text-color), #4A5561);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.dark-theme .tech-item:hover span {
+    background: linear-gradient(45deg, #fff, #A8B5C3);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+/* Tablet */
 @media (max-width: 768px) {
+
+    .tech-grid,
     .extended-tech-grid {
         grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .tech-item img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .tech-item span {
+        font-size: 1rem;
     }
 }
 
+
+/* Móvil */
 @media (max-width: 480px) {
+
+    .tech-grid,
     .extended-tech-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .tech-item {
+        padding: 0.8rem;
+    }
+
+    .tech-item span {
+        font-size: 0.9rem;
     }
 }
 
