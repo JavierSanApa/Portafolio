@@ -77,3 +77,47 @@ document.addEventListener('DOMContentLoaded', () => { // Un solo listener para t
         });
     }
 });
+
+const projectImages = document.querySelectorAll('.project-image img');
+const lightbox = document.getElementById('project-lightbox');
+const lightboxImage = document.getElementById('lightbox-image');
+const lightboxClose = document.querySelector('.lightbox-close');
+
+projectImages.forEach(image => {
+    image.addEventListener('click', () => {
+        lightboxImage.src = image.src;
+        lightboxImage.alt = image.alt;
+
+        lightbox.classList.add('active');
+
+        // Evita que la página haga scroll detrás del lightbox
+        document.body.style.overflow = 'hidden';
+    });
+});
+
+
+function closeLightbox() {
+    lightbox.classList.remove('active');
+
+    document.body.style.overflow = '';
+}
+
+
+/* X */
+lightboxClose.addEventListener('click', closeLightbox);
+
+
+/* Clic fuera de la imagen */
+lightbox.addEventListener('click', (event) => {
+    if (event.target === lightbox) {
+        closeLightbox();
+    }
+});
+
+
+/* Tecla ESC */
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && lightbox.classList.contains('active')) {
+        closeLightbox();
+    }
+});

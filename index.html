@@ -72,6 +72,85 @@
             <img src="assets/icons/proyectos.svg" alt="Proyectos">
             Proyectos
         </h2>
+
+        <div class="project-card">
+            <div class="project-content">
+
+                <div class="project-text">
+                    <span class="featured-project">
+                        <i class="bi bi-star-fill"></i>
+                        Proyecto destacado
+                    </span>
+                    <h3>DevSupport AI</h3>
+
+                    <p>
+                        <strong>DevSupport AI</strong> es un asistente conversacional inteligente diseñado para
+                        integrar <strong>Inteligencia Artificial y RAG</strong> en aplicaciones web, combinando
+                        información estructurada, documentación propia y modelos de lenguaje para generar
+                        respuestas adaptadas al contexto.
+                        <br><br>
+
+                        🤖 <strong>IA y RAG:</strong><br>
+                        Integra un <strong>LLM mediante Groq</strong> con una arquitectura RAG basada en
+                        <strong>ChromaDB y Sentence Transformers</strong>. La documentación se transforma en
+                        embeddings y se almacena en una base de datos vectorial, permitiendo recuperar
+                        información relevante antes de generar la respuesta.
+                        <br><br>
+
+                        🧠 <strong>Sistema inteligente de consultas:</strong><br>
+                        El backend puede determinar qué fuente de información necesita cada consulta:
+                        <strong>datos estructurados de la base de datos, conocimiento recuperado mediante RAG
+                            o el propio modelo de IA</strong>, utilizando cada recurso según el tipo de pregunta.
+                        <br><br>
+
+                        ⚙️ <strong>Arquitectura Full Stack:</strong><br>
+                        El chatbot cuenta con una interfaz desarrollada en <strong>Angular</strong> conectada
+                        a una API creada con <strong>FastAPI y Python</strong>. Los datos estructurados se
+                        gestionan mediante <strong>SQLite</strong>, mientras que ChromaDB almacena la información
+                        vectorizada utilizada por el sistema RAG.
+                        <br><br>
+
+                        🔄 <strong>Base de conocimiento:</strong><br>
+                        El sistema incorpora un proceso de <strong>indexación automática de documentación</strong>,
+                        detectando cambios para mantener actualizada la información utilizada por el asistente
+                        sin necesidad de reconstruir manualmente la base de conocimiento.
+                        <br><br>
+
+                        🧩 <strong>Diseño reutilizable:</strong><br>
+                        La arquitectura está planteada para poder adaptar el chatbot a
+                        <strong>diferentes aplicaciones y casos de uso</strong>, modificando sus fuentes de datos,
+                        documentación y comportamiento sin tener que desarrollar nuevamente todo el sistema.
+                        <br><br>
+
+                        🛠️ <strong>Tecnologías:</strong><br>
+                        Angular, TypeScript, Python, FastAPI, Groq, ChromaDB, Sentence Transformers,
+                        RAG, SQLite e IA Generativa.
+                    </p>
+
+                    <button class="read-more-btn">Leer más</button>
+
+                    <div class="project-buttons">
+                        <a href="assets/Documentacion DevSupport AI.pdf" target="_blank" class="project-btn demo">
+                            <i class="bi bi-file-earmark-text"></i>
+                            Detalles
+                        </a>
+
+                        <a href="https://github.com/JavierSanApa/DevSupport.AI" target="_blank"
+                            class="project-btn github">
+                            <i class="bi bi-github"></i>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-image">
+                    <img src="assets/img/proyects/DevSupportAI.png"
+                        alt="DevSupport AI - Chatbot con Inteligencia Artificial y RAG">
+                </div>
+
+            </div>
+        </div>
+
         <div class="project-card">
             <div class="project-content">
                 <div class="project-text">
@@ -96,12 +175,13 @@
                     <button class="read-more-btn">Leer más</button>
                     <div class="project-buttons">
                         <a href="assets/Guia de Uso - Codi Transport.pdf" target="_blank" class="project-btn demo">
-                            <img src="assets/icons/demo.svg" alt="Demo">
+                            <i class="bi bi-link-45deg"></i>
                             Guía
                         </a>
+
                         <a href="https://github.com/JavierSanApa/School-Transport" target="_blank"
                             class="project-btn github">
-                            <img src="assets/icons/github.svg" alt="GitHub">
+                            <i class="bi bi-github"></i>
                             GitHub
                         </a>
                     </div>
@@ -136,12 +216,13 @@
                     <button class="read-more-btn">Leer más</button>
                     <div class="project-buttons">
                         <a href="https://youtu.be/cKLI_9qGNbM" target="_blank" class="project-btn demo">
-                            <img src="assets/icons/demo.svg" alt="Demo">
+                            <i class="bi bi-play-circle"></i>
                             Demo
                         </a>
+
                         <a href="https://github.com/JavierSanApa/StreetVibesShop" target="_blank"
                             class="project-btn github">
-                            <img src="assets/icons/github.svg" alt="GitHub">
+                            <i class="bi bi-github"></i>
                             GitHub
                         </a>
                     </div>
@@ -187,11 +268,12 @@
                     <button class="read-more-btn">Leer más</button>
                     <div class="project-buttons">
                         <a href="https://youtu.be/cnnfRbqEuP0" target="_blank" class="project-btn demo">
-                            <img src="assets/icons/demo.svg" alt="Demo">
+                            <i class="bi bi-play-circle"></i>
                             Demo
                         </a>
+
                         <a href="https://github.com/JavierSanApa/Spotify" target="_blank" class="project-btn github">
-                            <img src="assets/icons/github.svg" alt="GitHub">
+                            <i class="bi bi-github"></i>
                             GitHub
                         </a>
                     </div>
@@ -535,6 +617,14 @@
     </section>
 
     </main>
+    <!-- Lightbox para imágenes de proyectos -->
+    <div id="project-lightbox" class="project-lightbox">
+        <button class="lightbox-close" aria-label="Cerrar imagen">
+            <i class="bi bi-x-lg"></i>
+        </button>
+
+        <img id="lightbox-image" src="" alt="Vista ampliada del proyecto">
+    </div>
     <script src="main.js"></script>
 
 </body>
